@@ -1,0 +1,228 @@
+/* ===========================
+   Nexus Supply Solutions
+   Version 1 Stylesheet
+=========================== */
+
+:root{
+  --primary:#123b69;
+  --secondary:#2b7bbb;
+  --accent:#f39c12;
+  --bg:#ffffff;
+  --light:#f5f7fa;
+  --text:#2f3640;
+  --muted:#6b7280;
+  --radius:12px;
+  --shadow:0 8px 24px rgba(0,0,0,.08);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',sans-serif;
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.7;
+}
+img{max-width:100%;display:block}
+a{text-decoration:none}
+
+h1,h2,h3{
+  font-family:'Poppins',sans-serif;
+  color:var(--primary);
+}
+
+header{
+  position:sticky;
+  top:0;
+  background:#fff;
+  z-index:1000;
+  box-shadow:0 2px 10px rgba(0,0,0,.05);
+}
+
+.navbar{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 24px;
+}
+
+.logo img{height:58px}
+
+.nav-links{
+  list-style:none;
+  display:flex;
+  gap:28px;
+}
+
+.nav-links a{
+  color:var(--primary);
+  font-weight:600;
+}
+
+.nav-links a:hover{
+  color:var(--accent);
+}
+
+.hero{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+  padding:80px 24px;
+}
+
+.small-heading{
+  color:var(--accent);
+  letter-spacing:2px;
+  font-weight:700;
+  font-size:.9rem;
+}
+
+.hero h1{
+  font-size:3.2rem;
+  margin:18px 0;
+  line-height:1.2;
+}
+
+.hero p{
+  color:var(--muted);
+  margin-bottom:30px;
+}
+
+.primary-btn{
+  display:inline-block;
+  background:var(--primary);
+  color:#fff;
+  padding:15px 28px;
+  border-radius:8px;
+  font-weight:600;
+  transition:.25s;
+}
+
+.primary-btn:hover{
+  background:var(--accent);
+  transform:translateY(-2px);
+}
+
+.hero-image img{
+  border-radius:18px;
+  box-shadow:var(--shadow);
+}
+
+section{
+  padding:80px 24px;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:50px;
+}
+
+.section-title p{
+  color:var(--muted);
+}
+
+.why-grid,
+.services-grid,
+.process-grid{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:28px;
+}
+
+.card,
+.service-card,
+.step{
+  background:#fff;
+  padding:30px;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  transition:.25s;
+}
+
+.card:hover,
+.service-card:hover,
+.step:hover{
+  transform:translateY(-6px);
+}
+
+.number{
+  width:52px;
+  height:52px;
+  border-radius:50%;
+  background:var(--primary);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:18px;
+  font-weight:700;
+}
+
+.cta{
+  background:var(--primary);
+  color:#fff;
+  text-align:center;
+}
+
+.cta h2,
+.cta p{
+  color:#fff;
+}
+
+.cta .primary-btn{
+  background:var(--accent);
+  margin-top:25px;
+}
+
+.contact{
+  text-align:center;
+}
+
+footer{
+  background:var(--primary);
+  color:#fff;
+  text-align:center;
+  padding:50px 24px;
+}
+
+footer img{
+  height:70px;
+  margin:0 auto 20px;
+}
+
+footer p{
+  margin:8px 0;
+}
+
+@media(max-width:900px){
+  .hero{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .hero h1{
+    font-size:2.4rem;
+  }
+
+  .navbar{
+    flex-direction:column;
+    gap:18px;
+  }
+
+  .nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:18px;
+  }
+
+  .logo img{
+    height:50px;
+  }
+}
